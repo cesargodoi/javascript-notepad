@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../js-html/">
+        <link rel="prev" href="../numbers/">
       
       
-        <link rel="next" href="../operators/">
+        <link rel="next" href="../strings/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Números - JavaScript</title>
+        <title>Operadores - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#numeros" class="md-skip">
+        <a href="#operadores" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Números
+              Operadores
             
           </span>
         </div>
@@ -321,6 +321,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Números
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -332,28 +352,18 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    Números
+    Operadores
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../operators/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -362,6 +372,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aritimeticos" class="md-nav__link">
+    Aritiméticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incremento" class="md-nav__link">
+    Incremento (++)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decremento-" class="md-nav__link">
+    Decremento (- -)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atribuicao" class="md-nav__link">
+    Atribuição
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -454,6 +512,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aritimeticos" class="md-nav__link">
+    Aritiméticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incremento" class="md-nav__link">
+    Incremento (++)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decremento-" class="md-nav__link">
+    Decremento (- -)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atribuicao" class="md-nav__link">
+    Atribuição
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -467,10 +561,81 @@
                   
 
 
-<h1 id="numeros">Números</h1>
-<p>Os principais tipos de números em JavaScript são:</p>
-<p><strong>Números inteiros (Integers)</strong>: Representam números inteiros, positivos ou negativos, sem casas decimais. Exemplos: 42, -10, 0.</p>
-<p><strong>Números de ponto flutuante (Floating-Point Numbers)</strong>: São usados para representar números com casas decimais. JavaScript usa o padrão IEEE 754 para representar números de ponto flutuante de precisão dupla. Exemplos: 3.14, -0.5, 1.0.</p>
+<h1 id="operadores">Operadores</h1>
+<p>Em javascript nós temos operadores aritiméticos, de incremento e de atribuição</p>
+<h3 id="aritimeticos">Aritiméticos</h3>
+<p>adição / concatenação (+)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w">      </span><span class="c1">// 5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// ba</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">15</span><span class="p">);</span><span class="w">   </span><span class="c1">// a15</span>
+</code></pre></div></td></tr></table></div></p>
+<p>subtração (-)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w">     </span><span class="c1">// 7</span>
+</code></pre></div></td></tr></table></div></p>
+<p>multiplicação (*)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w">      </span><span class="c1">// 25</span>
+</code></pre></div></td></tr></table></div></p>
+<p>divisão (/)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">15</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w">     </span><span class="c1">// 5</span>
+</code></pre></div></td></tr></table></div></p>
+<p>potenciação (**)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w">     </span><span class="c1">// 8</span>
+</code></pre></div></td></tr></table></div></p>
+<p>módulo da divisão (%)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">18</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w">      </span><span class="c1">// 3</span>
+</code></pre></div></td></tr></table></div></p>
+<p>A precedência de operadores é a seguinte:</p>
+<table>
+<thead>
+<tr>
+<th>1.</th>
+<th>(…)</th>
+<th>o que estiver dentro dos parentesis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.</td>
+<td>**</td>
+<td>o que for potenciação</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>*   /   %</td>
+<td>multiplicação, divisão e módulo da divisão</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>+   -</td>
+<td>adição e subtração</td>
+</tr>
+</tbody>
+</table>
+<h3 id="incremento">Incremento (++)</h3>
+<p>Cada vez que é usado, incrementa (ou decrementa) 1 do valor da variável
+pode ser usado antes ou depois da variável.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="o">++</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime 1 e atualiza o valor de num para 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w">    </span><span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">++</span><span class="nx">num</span><span class="p">);</span><span class="w">  </span><span class="c1">// atualiza o valor de num para 3 e imprime 3</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w">    </span><span class="c1">// 3</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="decremento-">Decremento (- -)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="o">--</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime 3 e atualiza o valor de num para 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w">    </span><span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">--</span><span class="nx">num</span><span class="p">);</span><span class="w">  </span><span class="c1">// atualiza o valor de num para 1 e imprime 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w">    </span><span class="c1">// 1</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="atribuicao">Atribuição</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -480,67 +645,16 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Alguns exemplos</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.5</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">  </span><span class="c1">// 3.5</span>
-
-<span class="c1">// .toString()</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">  </span><span class="c1">// 12.5 (sting)</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">num3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num3</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">   </span><span class="c1">// 1111011 (binário)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num3</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">8</span><span class="p">));</span><span class="w">   </span><span class="c1">// 173 (octal)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num3</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span><span class="w">  </span><span class="c1">// 7b (hexadecimal)</span>
-
-<span class="c1">// .toFixed()</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">num4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">23.3566352435</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num4</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">  </span><span class="c1">// 23.36</span>
-
-<span class="c1">// Number.isIntteger()</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">num1</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">num2</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
-
-<span class="c1">// Number.isNaN()</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">temp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="s1">&#39;X&#39;</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">temp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="s1">&#39;10&#39;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">temp1</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">temp2</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
-</code></pre></div></td></tr></table></div>
-<blockquote>
-<p>O javascript usa IEEE 754-2008 para gerenciar os seu cálculos.</p>
-</blockquote>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// imprecisões</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.7</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">n2</span><span class="p">);</span><span class="w">  </span><span class="c1">// 0.7999999999999999 🤔</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Infinity 🤔</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// += </span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// num = num + 10 -&gt; 11</span>
+<span class="c1">// -=</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// num = num -  2 -&gt;  9</span>
+<span class="c1">// *=</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// num = num *  2 -&gt; 18</span>
+<span class="c1">// /=</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// num = num /  3 -&gt;  6</span>
+<span class="c1">// **=</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">**=</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// num = num ** 2 -&gt; 36</span>
 </code></pre></div></td></tr></table></div>
 
 

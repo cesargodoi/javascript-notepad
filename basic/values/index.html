@@ -20,7 +20,7 @@
     
     
       
-        <title>Valores - JavaScript</title>
+        <title>Valores e Tipos - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#valores" class="md-skip">
+        <a href="#valores-e-tipos" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Valores
+              Valores e Tipos
             
           </span>
         </div>
@@ -343,6 +343,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../strings/" class="md-nav__link">
         
   
@@ -376,7 +396,7 @@
           
   
   <span class="md-ellipsis">
-    Valores
+    Valores e Tipos
   </span>
   
 
@@ -387,7 +407,7 @@
         
   
   <span class="md-ellipsis">
-    Valores
+    Valores e Tipos
   </span>
   
 
@@ -419,6 +439,68 @@
   <a href="#referencia" class="md-nav__link">
     Referência
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos" class="md-nav__link">
+    Tipos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numbers" class="md-nav__link">
+    numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undefined" class="md-nav__link">
+    undefined
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null" class="md-nav__link">
+    null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean" class="md-nav__link">
+    boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbol" class="md-nav__link">
+    symbol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeof" class="md-nav__link">
+    typeof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -498,6 +580,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tipos" class="md-nav__link">
+    Tipos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numbers" class="md-nav__link">
+    numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undefined" class="md-nav__link">
+    undefined
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null" class="md-nav__link">
+    null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean" class="md-nav__link">
+    boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbol" class="md-nav__link">
+    symbol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeof" class="md-nav__link">
+    typeof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -513,7 +657,7 @@
                   
 
 
-<h1 id="valores">Valores</h1>
+<h1 id="valores-e-tipos">Valores e Tipos</h1>
 <h2 id="primitivos">Primitivos</h2>
 <p>Os valores primitivos são imutáveis:</p>
 <ul>
@@ -585,13 +729,56 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span><span class="w">  </span><span class="c1">// [1, 2, 3, 4] [1, 2, 3]</span>
 
 
-<span class="c1">// mesmo exemplo com oobject</span>
+<span class="c1">// mesmo exemplo com object</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Cesar&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">53</span><span class="w"> </span><span class="p">}</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">f</span><span class="w"> </span><span class="p">}</span>
 
 <span class="nx">f</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jady&#39;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
+<h2 id="tipos">Tipos</h2>
+<h3 id="strings">strings</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Cesar&quot;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Godoi&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cityOfBirth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Bauru`</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="numbers">numbers</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="kr">float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.34</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="undefined">undefined</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">country</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">district</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="null">null</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="boolean">boolean</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">exist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">doesNotExist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="symbol">symbol</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">symbl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Symbol</span><span class="p">(</span><span class="s1">&#39;é nois&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="typeof">typeof</h3>
+<p>Podemos usar o método <code>typeof</code> para descobrir o tipo de uma variável ou constante.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">cityOfBirth</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">cityOfBirth</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="kr">float</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="ow">typeof</span><span class="w"> </span><span class="kr">float</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">country</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">country</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">dog</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">dog</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w">  </span><span class="c1">// o typeof de null será object (bug do javascript)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">doesNotExist</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">doesNotExist</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">symbl</span><span class="si">}</span><span class="sb"> descr: </span><span class="si">${</span><span class="nx">symbl</span><span class="p">.</span><span class="nx">description</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
 
 
 
