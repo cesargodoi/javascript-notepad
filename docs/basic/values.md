@@ -1,4 +1,4 @@
-# Valores
+# Valores e Tipos
 
 ## Primitivos
 
@@ -49,10 +49,58 @@ e.pop();
 console.log(d, e);  // [1, 2, 3, 4] [1, 2, 3]
 
 
-// mesmo exemplo com oobject
+// mesmo exemplo com object
 const f = { name: 'Cesar', age: 53 }
 const g = { ...f }
 
 f.name = 'Jady'
 console.log(f, g);
+```
+
+## Tipos
+
+### strings
+```{.js linenums="1"}
+const firstName = "Cesar";
+const lastName = 'Godoi';
+const cityOfBirth = `Bauru`;
+```
+
+### numbers
+```{.js linenums="1"}
+const integer = 12;
+const float = 12.34;
+```
+
+### undefined
+```{.js linenums="1"}
+let country;
+var district;
+```
+
+### null
+```{.js linenums="1"}
+const dog = null;
+```
+
+### boolean
+```{.js linenums="1"}
+const exist = true;
+const doesNotExist = false;
+```
+
+### symbol
+```{.js linenums="1"}
+const symbl = Symbol('é nois');
+```
+
+### typeof
+Podemos usar o método `typeof` para descobrir o tipo de uma variável ou constante.
+```{.js linenums="1"}
+console.log(`${cityOfBirth} = ${typeof cityOfBirth}`);
+console.log(`${float} = ${typeof float}`);
+console.log(`${country} = ${typeof country}`);
+console.log(`${dog} = ${typeof dog}`);  // o typeof de null será object (bug do javascript)
+console.log(`${doesNotExist} = ${typeof doesNotExist}`);
+console.log(`${typeof symbl} descr: ${symbl.description}`);
 ```

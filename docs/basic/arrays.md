@@ -11,20 +11,19 @@ Vamos considerar o seguinte `array` abaixo:
 
 ```{.js linenums="1"}
 const alunos = ['Cesar', 'Otávio', 'Jady'];
-console.log(alunos);  // ['Cesar', 'Otávio', 'Jady']
-console.log(typeof alunos);  // object
+console.log(alunos);                   // ['Cesar', 'Otávio', 'Jady']
+console.log(typeof alunos);            // object
 console.log(alunos instanceof Array);  // true
 ```
 
 Podemos acessar os elementos do `array` à partir dos seus `índices`:
 ```{.js linenums="1"}
-console.log(alunos[0]);  // Cesar
+console.log(alunos[0]);   // Cesar
 console.log(alunos[10]);  // undefined
 ```
 
 Também é possivel atualizar um elemento do `array` usando o seu `índice`:
 ```{.js linenums="1"}
-// atualizar um elemento
 alunos[1] = 'Floriano';
 console.log(alunos);  // ['Cesar', 'Floriano', 'Jady']
 ```
@@ -32,7 +31,6 @@ console.log(alunos);  // ['Cesar', 'Floriano', 'Jady']
 Podemos inserir um novo elemento a um `array` apontando esse elemento para um 
 `índice` maior do que o último `índice` do `array`.
 ```{.js linenums="1"}
-// adicionar um elemento ao final da lista
 alunos[3] = 'Otávio';
 console.log(alunos);  // ['Cesar', 'Floriano', 'Jady', 'Otávio']
 ```
@@ -50,27 +48,27 @@ console.log(alunos);  // ['Cesar', 'Floriano', 'Jady', 'Otávio', 'Fon']
 adiciona um elemento ao início da lista
 ```{.js linenums="1"}
 alunos.unshift('Edu');
-console.log(alunos); // ['Edu', 'Cesar', 'Floriano', 'Jady', 'Otávio', 'Fon']
+console.log(alunos);  // ['Edu', 'Cesar', 'Floriano', 'Jady', 'Otávio', 'Fon']
 ```
 
 ### pop
 remove o último elemento
 ```{.js linenums="1"}
 alunos.pop();
-console.log(alunos); // ['Edu', 'Cesar', 'Floriano', 'Jady', 'Otávio']
-let removido = alunos.pop();  // remove o último elemento e o atribui à variável removido
+console.log(alunos);                    // ['Edu', 'Cesar', 'Floriano', 'Jady', 'Otávio']
+let removido = alunos.pop();            // remove o último elemento e o atribui à variável removido
 console.log(`removido = ${removido}`);  // removido = Otávio
-console.log(alunos);  // ['Edu', 'Cesar', 'Floriano', 'Jady']
+console.log(alunos);                    // ['Edu', 'Cesar', 'Floriano', 'Jady']
 ```
 
 ### shift
 remove o primeiro elemento 
 ```{.js linenums="1"}
 alunos.shift();
-console.log(alunos);  // ['Cesar', 'Floriano', 'Jady']
-removido = alunos.shift();  // remove o primeiro elemento e o atribui à variável removido
+console.log(alunos);                    // ['Cesar', 'Floriano', 'Jady']
+removido = alunos.shift();              // remove o primeiro elemento e o atribui à variável removido
 console.log(`removido = ${removido}`);  // removido = Cesar
-console.log(alunos);  // ['Floriano', 'Jady']
+console.log(alunos);                    // ['Floriano', 'Jady']
 ```
 
 ### delete
@@ -90,7 +88,7 @@ console.log(alunos);
 seleciona elementos sequenciais
 ```{.js linenums="1"}
 console.log(alunos.slice(0, 2));  // ['Cesar', 'Jady']
-console.log(alunos.slice(-2));  // ['Edu', 'Otávio']
+console.log(alunos.slice(-2));    // ['Edu', 'Otávio']
 ```
 
 ### join
