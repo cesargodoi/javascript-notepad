@@ -1,0 +1,24 @@
+site_name: JavaScript
+
+theme:  # mais temas -> github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
+  name: material # pré instalados -> readthedocs e mkdocs (default)
+  palette:
+    - scheme: default
+      primary: purple
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+    - scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+markdown_extensions:
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.highlight
+
