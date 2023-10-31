@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../js-html/">
+        <link rel="prev" href="../numbers/">
       
       
         <link rel="next" href="../operators/">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Números - JavaScript</title>
+        <title>Objetos - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#numeros" class="md-skip">
+        <a href="#objetos" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Números
+              Objetos
             
           </span>
         </div>
@@ -263,7 +263,7 @@
             
   
   <span class="md-ellipsis">
-    Basic
+    Basico
   </span>
   
 
@@ -273,7 +273,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Basic
+            Basico
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -321,6 +321,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Números
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -336,7 +356,7 @@
         
   
   <span class="md-ellipsis">
-    Números
+    Objetos
   </span>
   
 
@@ -434,6 +454,129 @@
   
 
     
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Funções
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Funções
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fun%C3%A7%C3%B5es/constructor-function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Constructor function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fun%C3%A7%C3%B5es/factory-function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Factory function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fun%C3%A7%C3%B5es/function-declaration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Declaração de funções
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fun%C3%A7%C3%B5es/parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parametros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -467,81 +610,38 @@
                   
 
 
-<h1 id="numeros">Números</h1>
-<p>Os principais tipos de números em JavaScript são:</p>
-<p><strong>Números inteiros (Integers)</strong>: Representam números inteiros, positivos ou negativos, sem casas decimais. Exemplos: 42, -10, 0.</p>
-<p><strong>Números de ponto flutuante (Floating-Point Numbers)</strong>: São usados para representar números com casas decimais. JavaScript usa o padrão IEEE 754 para representar números de ponto flutuante de precisão dupla. Exemplos: 3.14, -0.5, 1.0.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Alguns exemplos</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.5</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">  </span><span class="c1">// 3.5</span>
-
-<span class="c1">// .toString()</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">  </span><span class="c1">// 12.5 (sting)</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">num3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num3</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">   </span><span class="c1">// 1111011 (binário)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num3</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">8</span><span class="p">));</span><span class="w">   </span><span class="c1">// 173 (octal)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num3</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span><span class="w">  </span><span class="c1">// 7b (hexadecimal)</span>
-
-<span class="c1">// .toFixed()</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">num4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">23.3566352435</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num4</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">  </span><span class="c1">// 23.36</span>
-
-<span class="c1">// Number.isIntteger()</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">num1</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">num2</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
-
-<span class="c1">// Number.isNaN()</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">temp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="s1">&#39;X&#39;</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">temp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="s1">&#39;10&#39;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">temp1</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">temp2</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
-</code></pre></div></td></tr></table></div>
-<blockquote>
-<p>O javascript usa IEEE 754-2008 para gerenciar os seu cálculos.</p>
-</blockquote>
+<h1 id="objetos">Objetos</h1>
+<p><code>Objects</code>  são estruturas de dados que pode armazenar valores e funções 
+relacionados. Os objetos são uma parte fundamental da linguagem e são usados 
+para representar e organizar informações de maneira eficaz. Eles são 
+construídos a partir de pares de chave-valor, nos quais as chaves são <code>strings</code> 
+(ou <code>symbols</code>) que atuam como identificadores e os valores podem ser de 
+qualquer tipo de dado, incluindo <code>numbers</code>, <code>strings</code>, outros <code>objects</code>, 
+<code>functions</code> e assim por diante.</p>
+<p>Vejamos um exemplo de objeto:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// imprecisões</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.7</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">n2</span><span class="p">);</span><span class="w">  </span><span class="c1">// 0.7999999999999999 🤔</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Infinity 🤔</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pessoa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">nome</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;João&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">idade</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">profissao</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Desenvolvedor&quot;</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Neste exemplo, <code>pessoa</code> é um objeto com três propriedades: <code>nome</code>, <code>idade</code> e 
+<code>profissao</code>, e cada propriedade tem um valor associado a ela.</p>
+<p>Você pode acessar as propriedades de um objeto usando a notação de ponto ou a 
+notação de colchetes, assim:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pessoa</span><span class="p">.</span><span class="nx">nome</span><span class="p">);</span><span class="w">      </span><span class="c1">// João</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pessoa</span><span class="p">[</span><span class="s1">&#39;idade&#39;</span><span class="p">]);</span><span class="w">  </span><span class="c1">// 30</span>
 </code></pre></div></td></tr></table></div>
+<p>Além disso, você pode adicionar novas propriedades, modificar propriedades 
+existentes e até mesmo remover propriedades de objetos em JavaScript. Objetos 
+também podem conter <code>methods</code>, que são <code>functions</code> associadas a eles. Eles são 
+muito versáteis e formam a base da programação orientada a objetos em 
+JavaScript.</p>
 
 
 
