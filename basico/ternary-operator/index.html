@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../strings/">
       
       
-        <link rel="next" href="../numbers/">
+        <link rel="next" href="../values/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Html + JavaScript - JavaScript</title>
+        <title>Operador Ternário - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#html-javascript" class="md-skip">
+        <a href="#operador-ternario" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Html + JavaScript
+              Operador Ternário
             
           </span>
         </div>
@@ -281,18 +281,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../js-html/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -301,7 +292,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -411,9 +401,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ternary-operator/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -422,6 +421,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -754,43 +754,37 @@
                   
 
 
-<h1 id="html-javascript">Html + JavaScript</h1>
-<p>Lincamos a nossa página <code>index.html</code> com o nosso script <code>main.js</code>, através do atributo <em><code>src</code></em> da tag <em><code>script</code></em>:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>With HTML<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="cp">&lt;!- aqui nós fazemos a junção -&gt;</span>
-</span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">main.js</span><pre><span></span><code><span class="cm">/**</span>
-<span class="cm"> * Tudo o que for colocado dentro do &#39;main.js&#39; </span>
-<span class="cm"> * será aplicado no arquivo &#39;index.html&#39;.</span>
-<span class="cm">*/</span>
-
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Os arquivos estão lincados!&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// será mostrada em uma caixa de mensagem</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Já essa mensagen, aparecerá no console do navegador&#39;</span><span class="p">);</span>
+<h1 id="operador-ternario">Operador Ternário</h1>
+<p>Um operador ternário é um operador condicional que permite avaliar uma 
+expressão e retornar um valor com base em uma condição. Ele é chamado de 
+"ternário" porque envolve três operandos: a condição a ser testada, o valor a 
+ser retornado se a condição for verdadeira e o valor a ser retornado se a 
+condição for falsa.</p>
+<p>A sintaxe básica do operador ternário é a seguinte:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">condição</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">valor_se_verdadeiro</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">valor_se_falso</span><span class="p">;</span>
 </code></pre></div>
+<p>Funciona assim:</p>
+<ol>
+<li>A condição é avaliada primeiro.</li>
+<li>Se a condição for verdadeira, o valor após o ponto de interrogação (<code>?</code>) 
+é retornado.</li>
+<li>Se a condição for falsa, o valor após os dois pontos (<code>:</code>) é retornado.</li>
+</ol>
+<p>Exemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mensagem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">idade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Maior de idade&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Menor de idade&quot;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensagem</span><span class="p">);</span><span class="w">  </span><span class="c1">// O resultado será &quot;Maior de idade&quot; neste caso.</span>
+</code></pre></div></td></tr></table></div>
+<p>Neste exemplo, a condição <code>idade &gt;= 18</code> é avaliada. Se for verdadeira, a string 
+"Maior de idade" é atribuída à variável <code>mensagem</code>. Caso contrário, a string 
+"Menor de idade" é atribuída.</p>
+<p>O operador ternário é uma maneira concisa de escrever expressões condicionais 
+em JavaScript e pode ser útil em muitas situações, como na atribuição de 
+valores com base em condições simples.</p>
 
 
 

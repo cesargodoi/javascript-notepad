@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../factory-function/">
+        <link rel="prev" href="../function-declaration/">
       
       
-        <link rel="next" href="../generators/">
+        <link rel="next" href="../parameters/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Declaração de funções - JavaScript</title>
+        <title>Generators - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#declaracao-de-funcoes" class="md-skip">
+        <a href="#generators" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Declaração de funções
+              Generators
             
           </span>
         </div>
@@ -628,6 +628,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../function-declaration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Declaração de funções
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -643,7 +663,7 @@
           
   
   <span class="md-ellipsis">
-    Declaração de funções
+    Generators
   </span>
   
 
@@ -654,7 +674,7 @@
         
   
   <span class="md-ellipsis">
-    Declaração de funções
+    Generators
   </span>
   
 
@@ -676,23 +696,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-declaration" class="md-nav__link">
-    function declaration
+  <a href="#definicao" class="md-nav__link">
+    Definição
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-expression" class="md-nav__link">
-    Function expression
+  <a href="#estrutura" class="md-nav__link">
+    Estrutura
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arrow-function" class="md-nav__link">
-    Arrow function
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
   </a>
+  
+    <nav class="md-nav" aria-label="Exemplos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basico" class="md-nav__link">
+    Básico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerador-infinito" class="md-nav__link">
+    Gerador infinito
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unindo-dois-geradores" class="md-nav__link">
+    Unindo dois geradores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregando-funcoes" class="md-nav__link">
+    Entregando funções
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -700,26 +754,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../generators/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Generators
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -799,23 +833,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-declaration" class="md-nav__link">
-    function declaration
+  <a href="#definicao" class="md-nav__link">
+    Definição
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-expression" class="md-nav__link">
-    Function expression
+  <a href="#estrutura" class="md-nav__link">
+    Estrutura
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arrow-function" class="md-nav__link">
-    Arrow function
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
   </a>
+  
+    <nav class="md-nav" aria-label="Exemplos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basico" class="md-nav__link">
+    Básico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerador-infinito" class="md-nav__link">
+    Gerador infinito
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unindo-dois-geradores" class="md-nav__link">
+    Unindo dois geradores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entregando-funcoes" class="md-nav__link">
+    Entregando funções
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -834,83 +902,193 @@
                   
 
 
-<h1 id="declaracao-de-funcoes">Declaração de funções</h1>
-<p>Em JavaScript, você pode declarar funções de várias maneiras. As formas mais 
-comuns de declarar funções são a <code>function declaration</code> (forma tradicional), 
-a <code>function expression</code> e temos também as <code>arrow functions</code>.</p>
-<h3 id="function-declaration">function declaration</h3>
+<h1 id="generators">Generators</h1>
+<h2 id="definicao">Definição</h2>
+<p>Um generator é uma função especial que permite pausar e retomar sua execução. 
+Isso é útil quando você precisa lidar com operações demoradas ou iterar sobre 
+um grande conjunto de dados de forma eficiente. Os generators são criados 
+usando a função <code>function*</code>.</p>
+<blockquote>
+<p>Existe também sintaxe mais recente <code>async function*</code>, que introduz o 
+conceito de "async generators" para trabalhar com operações assíncronas.<br />
+Veremos isso no futuro.</p>
+</blockquote>
+<p>Generators são úteis em várias situações, como iteração preguiçosa sobre 
+grandes conjuntos de dados, lidar com código assíncrono de forma mais legível 
+e criar pipelines de processamento de dados. Eles são uma característica 
+poderosa do JavaScript que simplifica muitos aspectos do código assíncrono e 
+da manipulação de sequências de dados.</p>
+<h2 id="estrutura">Estrutura</h2>
+<p>Para criar um generator, você usa a função <code>function*</code> e dentro dela, você 
+pode usar a instrução <code>yield</code>. O <code>yield</code> é usado para pausar a execução da 
+função e retornar um valor. Quando a função é retomada, ela continua a partir 
+do ponto em que foi pausada, mantendo seu estado interno.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">nomeDaFuncao</span><span class="p">(</span><span class="nx">parametros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// corpo da função</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">resultado</span><span class="w">  </span><span class="c1">// pode ou não retornar um resultado</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="o">*</span><span class="w"> </span><span class="nx">nomeDoGenerator</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="nx">elementoGerado</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Para funções tradicionais, ocorre o <code>hoisting</code>, que é a elevação dessas funções 
-para o início do script em tempo de execução, o que permite invocar (em tempo 
-de desenvolvimento) a função, mesmo antes dela ser declarada.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">falaOie</span><span class="p">();</span><span class="w">     </span><span class="c1">// função invocada antes da sua declaração  -&gt;  oie</span>
+<p>A cada vez que chamamos o atributo <code>next</code> do generator, ele nos entrega um 
+elemento da iteração, como demonstrado abaixo: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;elementoSendoEntregue&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">done</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Quando os elementos gerados chegam ao fim, o atributo <code>done</code> do objeto entregue 
+será igual a <code>true</code> e o elemento entregue será <code>undefined</code>.</p>
+<p>Caso usemos o <code>return</code>, ele encerrará o generator, excluindo qualquer <code>yield</code> 
+que venha após ele.</p>
+<h2 id="exemplos">Exemplos</h2>
+<h3 id="basico">Básico</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="o">*</span><span class="w"> </span><span class="nx">myGenerator</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="s1">&#39;elemento 1&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="s1">&#39;elemento 2&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="s1">&#39;elemento 3&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="s1">&#39;elemento 4&#39;</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">falaOie</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;oie&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">gen1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myGenerator</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen1</span><span class="p">);</span><span class="w">               </span><span class="c1">// Object [Generator] {}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen1</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span><span class="w">        </span><span class="c1">// { value: &#39;elemento 1&#39;, done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen1</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">);</span><span class="w">  </span><span class="c1">// elemento 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen1</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">);</span><span class="w">  </span><span class="c1">// elemento 3</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen1</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">);</span><span class="w">  </span><span class="c1">// elemento 4</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen1</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span><span class="w">        </span><span class="c1">// { value: undefined, done: true }</span>
+
+<span class="c1">// iterando com for</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">gen2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myGenerator</span><span class="p">();</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">val</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">gen2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="function-expression">Function expression</h3>
-<p>O fato de as funções serem objetos de primeira classe (first-class objects), 
-nos permite atribuí-las à variáveis.  Isso justifica esta segunda forma de 
-declarar nossas funções.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">dobra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<h3 id="gerador-infinito">Gerador infinito</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="o">*</span><span class="w"> </span><span class="nx">contador</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dobra</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">   </span><span class="c1">// 4</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">gen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">contador</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
 </code></pre></div></td></tr></table></div>
-<p>Podemos inclusive receber uma função como um parâmetro de outra função.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">executaFuncao</span><span class="p">(</span><span class="nx">funcao</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;O resultado da função é:&#39;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">funcao</span><span class="p">();</span>
+<p>Neste exemplo, a função <code>contador</code> é um generator que gera uma sequência 
+infinita de números inteiros começando por zero. O <code>yield</code> pausa a execução da 
+função e retorna o valor atual de <code>i</code>, e o método <code>next()</code> é usado para 
+avançar para o próximo valor da sequência.</p>
+<h3 id="unindo-dois-geradores">Unindo dois geradores</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="o">*</span><span class="w"> </span><span class="nx">generator1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nx">executaFuncao</span><span class="p">(</span><span class="nx">falaOie</span><span class="p">);</span><span class="w">   </span><span class="c1">// O resultado da função é:</span>
-<span class="w">                          </span><span class="c1">// oie</span>
+
+<span class="kd">function</span><span class="o">*</span><span class="w"> </span><span class="nx">generator2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">yield</span><span class="o">*</span><span class="w"> </span><span class="nx">generator1</span><span class="p">();</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="mf">7</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">gen4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">generator2</span><span class="p">()</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">val</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">gen4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span><span class="w">  </span><span class="c1">// itera de 1 à 7</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="arrow-function">Arrow function</h3>
-<p>É a forma mais moderna de declararmos uma função</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">funcArrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;sou uma arrow function&#39;</span><span class="p">);</span>
+<h3 id="entregando-funcoes">Entregando funções</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="o">*</span><span class="w"> </span><span class="nx">getFunction</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;vim do 1. yield&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;vim do 2. yield&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;vim do return&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="nx">funcArrow</span><span class="p">();</span><span class="w">  </span><span class="c1">// sou uma arrow function</span>
-</code></pre></div></td></tr></table></div>
-<p>Podemos atribuir uma função à um parametro de um objeto</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">pessoa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">nome</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Cesar&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="c1">// falar: () =&gt; console.log(&#39;e aí, tudo bem?&#39;),  // com arrow</span>
-<span class="w">    </span><span class="nx">falar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;e aí, tudo bem?&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">},</span><span class="w">      </span><span class="c1">// nova forma</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pessoa</span><span class="p">.</span><span class="nx">nome</span><span class="p">);</span><span class="w">  </span><span class="c1">// Cesar</span>
-<span class="nx">pessoa</span><span class="p">.</span><span class="nx">falar</span><span class="p">();</span><span class="w">            </span><span class="c1">// e aí, tudo bem?</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">gen5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getFunction</span><span class="p">();</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">func1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gen5</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">func2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gen5</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">func3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gen5</span><span class="p">.</span><span class="nx">next</span><span class="p">().</span><span class="nx">value</span><span class="p">;</span>
+
+<span class="nx">func1</span><span class="p">();</span><span class="w">  </span><span class="c1">// vim do 1. yield</span>
+<span class="nx">func2</span><span class="p">();</span><span class="w">  </span><span class="c1">// vim do 2. yield</span>
+<span class="nx">func3</span><span class="p">();</span><span class="w">  </span><span class="c1">// vim do return</span>
 </code></pre></div></td></tr></table></div>
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../operators/">
       
       
-        <link rel="next" href="../numbers/">
+        <link rel="next" href="../strings/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Html + JavaScript - JavaScript</title>
+        <title>Short Circuit (curto circuito) - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#html-javascript" class="md-skip">
+        <a href="#short-circuit-curto-circuito" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Html + JavaScript
+              Short Circuit (curto circuito)
             
           </span>
         </div>
@@ -281,18 +281,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../js-html/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -301,7 +292,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -371,9 +361,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../short-circuit/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Short Circuit (curto circuito)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -382,6 +392,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operador-and" class="md-nav__link">
+    Operador And ( &amp;&amp; )
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-or" class="md-nav__link">
+    Operador Or ( || )
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    Conclusão
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -741,6 +792,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operador-and" class="md-nav__link">
+    Operador And ( &amp;&amp; )
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-or" class="md-nav__link">
+    Operador Or ( || )
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    Conclusão
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -754,43 +834,64 @@
                   
 
 
-<h1 id="html-javascript">Html + JavaScript</h1>
-<p>Lincamos a nossa página <code>index.html</code> com o nosso script <code>main.js</code>, através do atributo <em><code>src</code></em> da tag <em><code>script</code></em>:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<h1 id="short-circuit-curto-circuito">Short Circuit (curto circuito)</h1>
+<p>Um "short circuit" refere-se a uma técnica de avaliação de expressões lógicas 
+que pode ser usada para determinar rapidamente o resultado de uma expressão com 
+base na primeira parte avaliada. Isso é particularmente útil em expressões 
+lógicas compostas, como aquelas envolvendo operadores lógicos <code>&amp;&amp;</code> (E lógico) e 
+<code>||</code> (OU lógico).</p>
+<p>Existem dois tipos principais de "short circuit" em JavaScript:</p>
+<h2 id="operador-and">Operador And ( &amp;&amp; )</h2>
+<p>Quando você usa o operador <code>&amp;&amp;</code>, a expressão é avaliada da esquerda para 
+a direita. Se a primeira parte (à esquerda) da expressão for avaliada como 
+falsa, a segunda parte (à direita) não será avaliada, economizando recursos. 
+Isso é útil para expressões em que todas as partes precisam ser verdadeiras 
+para que a expressão seja verdadeira.</p>
+<p>Exemplo:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">sayHello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="p">}</span>
 
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>With HTML<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">toPrint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toPrint</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">sayHello</span><span class="p">(</span><span class="s1">&#39;Otávio&#39;</span><span class="p">));</span><span class="w">  </span><span class="c1">// </span>
 
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="cp">&lt;!- aqui nós fazemos a junção -&gt;</span>
-</span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="nx">toPrint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toPrint</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">sayHello</span><span class="p">(</span><span class="s1">&#39;Sergio&#39;</span><span class="p">));</span><span class="w">  </span><span class="c1">//  Sergio</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="operador-or">Operador Or ( || )</h2>
+<p>Com o operador <code>||</code>, a expressão é novamente avaliada da esquerda para a 
+direita. No entanto, se a primeira parte (à esquerda) for avaliada como 
+verdadeira, a segunda parte (à direita) não será avaliada, economizando 
+recursos. Isso é útil quando você deseja fornecer um valor padrão se a 
+primeira parte for falsa.</p>
+<p>Exemplo:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">userColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">defaultColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">userColor</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;black&#39;</span><span class="p">;</span>
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">main.js</span><pre><span></span><code><span class="cm">/**</span>
-<span class="cm"> * Tudo o que for colocado dentro do &#39;main.js&#39; </span>
-<span class="cm"> * será aplicado no arquivo &#39;index.html&#39;.</span>
-<span class="cm">*/</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">defaultColor</span><span class="p">)</span><span class="w">  </span><span class="c1">// red</span>
 
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Os arquivos estão lincados!&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// será mostrada em uma caixa de mensagem</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Já essa mensagen, aparecerá no console do navegador&#39;</span><span class="p">);</span>
-</code></pre></div>
+<span class="nx">userColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">defaultColor</span><span class="p">)</span><span class="w">  </span><span class="c1">// black</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="conclusao">Conclusão</h2>
+<p>O uso de short circuit é uma técnica comum em JavaScript para melhorar a 
+eficiência do código e evitar erros desnecessários, especialmente ao lidar com 
+condições e valores padrão. No entanto, é importante usá-lo com cuidado, pois 
+pode afetar a legibilidade do código se não for usado de forma apropriada.</p>
 
 
 
