@@ -12,7 +12,7 @@ A sintaxe básica do operador ternário é a seguinte:
 condição ? valor_se_verdadeiro : valor_se_falso;
 ```
 
-Aqui está como funciona:
+Funciona assim:
 
 1. A condição é avaliada primeiro.
 2. Se a condição for verdadeira, o valor após o ponto de interrogação (`?`) 
