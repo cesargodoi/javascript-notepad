@@ -107,7 +107,7 @@ console.log(arr3);  // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 'Cesar' ]
 ```
 
 ### spread operator `...`
-usando o spread operator para concatenas `strings`
+usando o spread operator para concatenar `strings`
 ```{.js linenums="1"}
 const arr4 = [...arr1, 'Cesar', ...arr2, ...[7, 8, 9]];
 console.log(arr4);  // [ 1, 2, 3, 'Cesar', 4, 5, 6, 7, 8, 9 ]
