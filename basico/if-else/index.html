@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../if-else/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../numbers/">
+        <link rel="next" href="../js-html/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Html + JavaScript - JavaScript</title>
+        <title>If - Else - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#html-javascript" class="md-skip">
+        <a href="#if-else" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Html + JavaScript
+              If - Else
             
           </span>
         </div>
@@ -281,26 +281,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../if-else/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    If - Else
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -316,12 +296,32 @@
         
   
   <span class="md-ellipsis">
-    Html + JavaScript
+    If - Else
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js-html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Html + JavaScript
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1122,9 +1122,57 @@
                   
 
 
-<h1 id="html-javascript">Html + JavaScript</h1>
-<p>Lincamos a nossa página <code>index.html</code> com o nosso script <code>main.js</code>, através do atributo <em><code>src</code></em> da tag <em><code>script</code></em>:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<h1 id="if-else">If - Else</h1>
+<p>O <code>if-else</code> é uma estrutura de controle de fluxo que permite executar 
+diferentes blocos de código com base em uma condição. A estrutura básica do 
+<code>if-else</code> é a seguinte:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condição</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Este bloco de código é executado se a condição for verdadeira</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Este bloco de código é executado se a condição for falsa</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Aqui está como funciona o <code>if-else</code>:</p>
+<ol>
+<li>
+<p>A condição é avaliada: A expressão dentro dos parênteses após a 
+palavra-chave <code>if</code> é avaliada. Se essa expressão retornar <code>true</code>, o bloco de 
+código dentro das chaves seguintes é executado. Se a expressão for <code>false</code>, o 
+código dentro do bloco <code>else</code> (se houver) é executado.</p>
+</li>
+<li>
+<p>Execução do bloco: O bloco de código dentro das chaves do bloco <code>if</code> ou 
+<code>else</code> é executado de acordo com o resultado da avaliação da condição.</p>
+</li>
+</ol>
+<p>Aqui está um exemplo simples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">idade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">idade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Você é maior de idade.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Você é menor de idade.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Você é maior de idade.</span>
+</code></pre></div></td></tr></table></div>
+<p>Neste exemplo, a condição <code>idade &gt;= 18</code> é avaliada. Se for verdadeira, a 
+mensagem "Você é maior de idade." será impressa; caso contrário, a mensagem 
+"Você é menor de idade." será impressa.</p>
+<p>Também podemos usar <code>else if</code> para lidar com múltiplas condições. Por exemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1136,29 +1184,23 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75</span><span class="p">;</span>
 
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>With HTML<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Aprovado com A.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Aprovado com B.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Aprovado com C.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Reprovado.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="cp">&lt;!- aqui nós fazemos a junção -&gt;</span>
-</span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="c1">// Aprovado com B.</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">main.js</span><pre><span></span><code><span class="cm">/**</span>
-<span class="cm"> * Tudo o que for colocado dentro do &#39;main.js&#39; </span>
-<span class="cm"> * será aplicado no arquivo &#39;index.html&#39;.</span>
-<span class="cm">*/</span>
-
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Os arquivos estão lincados!&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// será mostrada em uma caixa de mensagem</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Já essa mensagen, aparecerá no console do navegador&#39;</span><span class="p">);</span>
-</code></pre></div>
+<p>Neste exemplo, o código verifica a nota do aluno e imprime a mensagem 
+apropriada com base na nota obtida. Se nenhuma das condições for atendida, a 
+mensagem "Reprovado." será impressa.</p>
 
 
 

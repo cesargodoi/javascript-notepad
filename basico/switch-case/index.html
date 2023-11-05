@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../if-else/">
+        <link rel="prev" href="../strings/">
       
       
-        <link rel="next" href="../numbers/">
+        <link rel="next" href="../ternary-operator/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Html + JavaScript - JavaScript</title>
+        <title>Switch - Case - JavaScript</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#html-javascript" class="md-skip">
+        <a href="#switch-case" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Html + JavaScript
+              Switch - Case
             
           </span>
         </div>
@@ -301,18 +301,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../js-html/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +312,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -431,9 +421,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../switch-case/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Switch - Case
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -442,6 +452,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    Exemplo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1109,6 +1146,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    Exemplo
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1122,9 +1174,52 @@
                   
 
 
-<h1 id="html-javascript">Html + JavaScript</h1>
-<p>Lincamos a nossa página <code>index.html</code> com o nosso script <code>main.js</code>, através do atributo <em><code>src</code></em> da tag <em><code>script</code></em>:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<h1 id="switch-case">Switch - Case</h1>
+<p>O <code>switch - case</code> é uma estrutura de controle de decisão em JavaScript que é usada 
+para avaliar uma expressão e executar código com base no valor dessa expressão. 
+É frequentemente usado para substituir múltiplas instruções <code>if-else</code> quando 
+você precisa fazer diferentes ações com base em um valor específico. A 
+estrutura geral do <code>switch - case</code> é a seguinte:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">expressao</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="nx">valor1</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// Código a ser executado se a expressão for igual a valor1</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="nx">valor2</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// Código a ser executado se a expressão for igual a valor2</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// ... Mais casos</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// Código a ser executado se nenhum dos casos anteriores for correspondido</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>O <code>switch - case</code> funciona da seguinte maneira:</p>
+<ol>
+<li>A expressão é avaliada uma vez.</li>
+<li>O valor resultante da expressão é comparado com cada caso (valor1, valor2, 
+etc.) na ordem em que eles são listados. </li>
+<li>Quando uma correspondência é encontrada, o código dentro desse caso é 
+executado.</li>
+<li>A instrução <code>break</code> é usada para sair do <code>switch - case</code> após a execução do 
+código do caso correspondente. Isso evita que os casos subsequentes sejam 
+executados acidentalmente. No entanto, o <code>break</code> não é estritamente necessário; 
+se você omiti-lo, o código continuará sendo executado nos casos subsequentes 
+até encontrar um <code>break</code> ou atingir o final do <code>switch - case</code>.</li>
+<li>Se nenhum caso corresponder ao valor da expressão, o código dentro do bloco 
+<code>default</code> é executado (se houver um bloco <code>default</code>). O bloco <code>default</code> é 
+opcional.</li>
+</ol>
+<h2 id="exemplo">Exemplo</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1136,29 +1231,62 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="mf">2023</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">22</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">dayOfWeekStr</span><span class="p">;</span>
 
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>With HTML<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">date</span><span class="p">.</span><span class="nx">getDay</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">0</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;domingo&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;segunda-feira&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;terça-feira&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;quarta-feira&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;quinta-feira&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;sexta-feira&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">6</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;sábado&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">dayOfWeekStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;dia normal&#39;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
 
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="cp">&lt;!- aqui nós fazemos a junção -&gt;</span>
-</span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">localDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">date</span><span class="p">.</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="s1">&#39;pt-BR&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeZone</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;UTC&#39;</span><span class="w"> </span><span class="p">}).</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Dia </span><span class="si">${</span><span class="nx">localDate</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="si">}</span><span class="sb"> foi </span><span class="si">${</span><span class="nx">dayOfWeekStr</span><span class="si">}</span><span class="sb">.`</span><span class="p">);</span>
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="c1">// Dia 22/03/2023 foi quarta-feira.</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">main.js</span><pre><span></span><code><span class="cm">/**</span>
-<span class="cm"> * Tudo o que for colocado dentro do &#39;main.js&#39; </span>
-<span class="cm"> * será aplicado no arquivo &#39;index.html&#39;.</span>
-<span class="cm">*/</span>
-
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Os arquivos estão lincados!&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// será mostrada em uma caixa de mensagem</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Já essa mensagen, aparecerá no console do navegador&#39;</span><span class="p">);</span>
-</code></pre></div>
 
 
 
